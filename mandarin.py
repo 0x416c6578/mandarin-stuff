@@ -6,5 +6,6 @@ import random
 # Currently doesn't do much...
 with open(sys.argv[1], mode="r") as mandarinFile:
     csvDictReader = csv.DictReader(mandarinFile)
-    # print(random.choice(list(csvDictReader)))
-    print(len(list(csvDictReader)))
+    for i in list(csvDictReader):
+        print(f"{i}")
+    # print(len(list(csvDictReader)))
