@@ -19,3 +19,4 @@ with open(sys.argv[1], mode="r") as mandarinFile:
     for word in vocab:
       print("Pinyin: " + word[strPinyinWithoutTones] + " (" + word[strDefinition] + ")", end="")
       input("")
+      print("Answer: " + word[strMandarin])
