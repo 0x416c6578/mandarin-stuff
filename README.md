@@ -4,6 +4,7 @@
 - This will allow for testing of translation, as well as presenting random English / Pinyin to be handwritten as characters on paper
 
 ## TODO:
+- [ ] **Example functionality separate to definition**
 - [ ] Copy over all written notes
 - [ ] Practice En-Zh and Zh-En functionality
 - [ ] Speed testing?
