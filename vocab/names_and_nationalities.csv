@@ -1,17 +1,17 @@
-mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid
-什么,shénme,shenme,2-5,what (question),the one with the cross - people said what! when jesus was resurrected (don't judge my way of learning stuff)
-谁,shéi,shei,2,who (question),the one with the 4 lines
-这,zhè,zhe,4,this,
-那,nà,na,4,that,
-都,dōu,dou,1,all/both,
-也,yĕ,ye,3,also,
-对,duì,dui,4,correct/right!,
-他,tā,ta,1,he,man+也
-她,tā,ta,1,she,woman+也
-名,míng,ming,2,name,has mouth particle 口
-字,zi,zi,5,word/character/random particle,study with one 点
-名字,míngzi,mingzi,2-5,name,name+particle
-叫,jiào,jiao,4,to be called / to call (name wise),contains mouth radical 口
-贵,guì,gui,4,honourable/expensive,中+line+见
-姓,xìng,xing,4,to have as a surname,woman+life (you're mum gave you life - you took her surname)
-太,tài,tai,4,too/very much/excessively,big+点
+mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid,example
+什么,shénme,shenme,2-5,what (question),the one with the cross - people said what! when jesus was resurrected (don't judge my way of learning stuff),这是什么？
+谁,shéi,shei,2,who (question),the one with the 4 lines,你是谁？
+这,zhè,zhe,4,this,,这是我的狗
+那,nà,na,4,that,,那个包系
+都,dōu,dou,1,all/both,,我们都喜欢狗
+也,yĕ,ye,3,also,,我也叫 Alex
+对,duì,dui,4,correct/right!,,
+他,tā,ta,1,he,man+也,他是我兄弟
+她,tā,ta,1,she,woman+也,她是我太太
+名,míng,ming,2,name,has mouth particle 口,你叫什么名字？
+字,zi,zi,5,word/character/random particle,study with one 点,名字
+名字,míngzi,mingzi,2-5,name,name+particle,我的名字是 Alex
+叫,jiào,jiao,4,to be called / to call (name wise),contains mouth radical 口,我叫 Alex
+贵,guì,gui,4,honourable/expensive,中+line+见,这是太贵了
+姓,xìng,xing,4,to have as a surname,woman+life (you're mum gave you life - you took her surname),贵姓？
+太,tài,tai,4,too/very much/excessively,big+点,这太小了
