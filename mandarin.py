@@ -55,9 +55,12 @@ q+Enter to exit
 ---------------------------------"""
 )
 
+numWords = len(vocab)
+i = 1
 for word in vocab:
     print(
-        f"\nPinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
+        f"\n---------------- {i}/{numWords} ----------------\n"
+        f"Pinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
         end="",
     )
     inp = input("")
@@ -78,3 +81,4 @@ for word in vocab:
         f"  Answer: {word[strMandarin]}\n  Full pinyin: {word[strPinyinWithTones]} ({word[strTones]})"
         + example
     )
+    i += 1
