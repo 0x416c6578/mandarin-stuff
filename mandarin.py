@@ -49,9 +49,9 @@ random.shuffle(vocab)
 print(
     """
 ---------------------------------
-enter for next word
-\"h\" enter for learning aid
-\"q\" enter to exit
+Enter for next word
+h+Enter for learning aid
+q+Enter to exit
 ---------------------------------"""
 )
 
@@ -70,4 +70,11 @@ for word in vocab:
         else:
             print(f"  No learning aid available  ", end="")
         input("")
-    print(f"  Answer: {word[strMandarin]}, example: {word[strExample]}")
+    if word[strExample] != "":
+        example = "\n  Example: " + word[strExample]
+    else:
+        example = ""
+    print(
+        f"  Answer: {word[strMandarin]}\n  Full pinyin: {word[strPinyinWithTones]} ({word[strTones]})"
+        + example
+    )
