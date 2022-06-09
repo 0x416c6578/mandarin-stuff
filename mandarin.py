@@ -2,6 +2,9 @@
 import csv
 import sys
 import random
+import argparse
+import os
+import glob
 
 strMandarin = "mandarin"
 strPinyinWithTones = "pinyin_tones"
@@ -11,32 +14,60 @@ strDefinition = "definition"
 strLearningAid = "learning_aid"
 strExample = "example"
 
-with open(sys.argv[1], mode="r") as mandarinFile:
-    csvDictReader = csv.DictReader(mandarinFile)
-    vocab = list(csvDictReader)
-    random.shuffle(vocab)
-    numWords = len(vocab)
-    print(
-        """
+parser = argparse.ArgumentParser(description="Learn Mandarin")
+parser.add_argument(
+    "fileOrDir", type=str, help="file or directory of files to test with"
+)
+parser.add_argument(
+    "-d",
+    "--useDirectory",
+    action="store_true",
+    help="use a directory of csv files -> will test using all files",
+)
+args = parser.parse_args()
+
+path = args.fileOrDir
+if args.useDirectory:
+    if not os.path.isdir(path):
+        print("Must specify a path with the -d flag")
+        sys.exit(0)
+    files = glob.glob(path + "/*.csv")
+else:
+    if os.path.isdir(path):
+        print("Must specify a csv vocab file")
+        sys.exit(0)
+    files = [args.fileOrDir]
+
+vocab = []
+for file in files:
+    with open(file, mode="r") as f:
+        csvDictReader = csv.DictReader(f)
+        vocab += list(csvDictReader)
+
+random.shuffle(vocab)
+
+print(
+    """
 ---------------------------------
 enter for next word
 \"h\" enter for learning aid
 \"q\" enter to exit
 ---------------------------------"""
+)
+
+for word in vocab:
+    print(
+        f"\nPinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
+        end="",
     )
-    for word in vocab:
-        print(
-            f"\nPinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
-            end="",
-        )
-        bruh = input("")
-        if "q" in bruh:
-            print("再见！")
-            sys.exit(0)
-        if "h" in bruh:
-            if len(word[strLearningAid]) > 0:
-                print(f"  {word[strLearningAid]}  ", end="")
-            else:
-                print(f"  No learning aid available  ", end="")
-            input("")
-        print(f"  Answer: {word[strMandarin]}, example: {word[strExample]}")
+    inp = input("")
+    if "q" in inp:
+        print("再见！")
+        sys.exit(0)
+    if "h" in inp:
+        if len(word[strLearningAid]) > 0:
+            print(f"  {word[strLearningAid]}  ", end="")
+        else:
+            print(f"  No learning aid available  ", end="")
+        input("")
+    print(f"  Answer: {word[strMandarin]}, example: {word[strExample]}")
