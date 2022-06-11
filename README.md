@@ -4,9 +4,10 @@
 - This will allow for testing of translation, as well as presenting random English / Pinyin to be handwritten as characters on paper
 
 ## TODO:
-- [ ] **Example functionality separate to definition**
+- [x] **Example functionality separate to definition**
+- [x] Practice En-Zh and Zh-En functionality
+- [x] Difficulty filtering
 - [ ] Copy over all written notes
-- [ ] Practice En-Zh and Zh-En functionality
 - [ ] Speed testing?
 - [ ] Number generator - for practicing translating numbers Zh-En
 - [ ] Simple sentence generator maybe? (perhaps scraping translation from Google Translate or similar (or using API if there is one))
