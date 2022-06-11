@@ -143,4 +143,4 @@ elif not args.characterTest and args.pinyinTest:
         print(f"  Translation: {word[strDefinition]}")
         time.sleep(0.12)
         i += 1
-print("再见！")
+print("\n\n再见！")
