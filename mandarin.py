@@ -84,7 +84,7 @@ if args.difficulty != None:
 else:
     print(f"No difficulty set")
 
-vocab = list(filter(lambda word: word[strDifficulty] >= str(difficulty), vocab))
+vocab = list(filter(lambda word: int(word[strDifficulty]) >= difficulty, vocab))
 
 print("Mandarin learning aid program")
 
