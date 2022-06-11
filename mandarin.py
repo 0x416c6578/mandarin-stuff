@@ -77,6 +77,7 @@ for file in files:
 # Shuffle vocab list
 random.shuffle(vocab)
 
+# Get difficulty
 difficulty = 0
 if args.difficulty != None:
     print(f"Difficulty set: {args.difficulty}")
@@ -84,9 +85,8 @@ if args.difficulty != None:
 else:
     print(f"No difficulty set")
 
+# Filter vocab by difficulty
 vocab = list(filter(lambda word: int(word[strDifficulty]) >= difficulty, vocab))
-
-print("Mandarin learning aid program")
 
 if not args.pinyinTest:
     # Test pinyin (no tones) + translation -> character
