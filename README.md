@@ -12,6 +12,7 @@
 - [ ] Number generator - for practicing translating numbers Zh-En
 - [ ] Simple sentence generator maybe? (perhaps scraping translation from Google Translate or similar (or using API if there is one))
 
+## Usage
 ```
 usage: mandarin.py [-h] [-f] [-d DIFFICULTY] [-c] [-p] fileOrFolder
 
