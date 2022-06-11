@@ -15,19 +15,28 @@ strTones = "tones"
 strDefinition = "definition"
 strLearningAid = "learning_aid"
 strExample = "example"
+strDifficulty = "difficulty"
 
 vocab = None
 
 # Argument parsing
 parser = argparse.ArgumentParser(description="Learn Mandarin")
 parser.add_argument(
-    "fileOrDir", type=str, help="file or directory of files to test with"
+    "fileOrFolder", type=str, help="file or directory of files to test with"
 )
+
 parser.add_argument(
-    "-d",
-    "--useDirectory",
+    "-f",
+    "--useFolder",
     action="store_true",
     help="use a directory of csv files -> will test using all files",
+)
+
+parser.add_argument(
+    "-d",
+    "--difficulty",
+    type=int,
+    help="min difficuly (from 1 to 5) to test from - to skip easy words",
 )
 
 parser.add_argument(
@@ -46,8 +55,9 @@ parser.add_argument(
 args = parser.parse_args()
 
 # Load vocabulary from file(s)
-path = args.fileOrDir
-if args.useDirectory:
+path = args.fileOrFolder
+files = []
+if args.useFolder:
     if not os.path.isdir(path):
         print("Must specify a path with the -d flag")
         sys.exit(0)
@@ -56,7 +66,7 @@ else:
     if os.path.isdir(path):
         print("Must specify a csv vocab file")
         sys.exit(0)
-    files = [args.fileOrDir]
+    files = [path]
 
 vocab = []
 for file in files:
@@ -66,6 +76,16 @@ for file in files:
 
 # Shuffle vocab list
 random.shuffle(vocab)
+
+difficulty = 0
+if args.difficulty != None:
+    print(f"Difficulty set: {args.difficulty}")
+    difficulty = int(args.difficulty)
+else:
+    print(f"No difficulty set")
+
+vocab = list(filter(lambda word: word[strDifficulty] >= str(difficulty), vocab))
+
 print("Mandarin learning aid program")
 
 if not args.pinyinTest:
@@ -94,7 +114,7 @@ if not args.pinyinTest:
         else:
             example = "\n"
 
-        print(f"  Answer: {word[strMandarin]}")
+        print(f"  Answer: {word[strMandarin]} (difficulty {word[strDifficulty]})")
         time.sleep(0.12)
         print(f"  Full pinyin: {word[strPinyinWithTones]} ({word[strTones]})")
         time.sleep(0.12)
@@ -123,3 +143,4 @@ elif not args.characterTest and args.pinyinTest:
         print(f"  Translation: {word[strDefinition]}")
         time.sleep(0.12)
         i += 1
+print("再见！")
