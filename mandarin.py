@@ -26,14 +26,13 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "-f",
-    "--useFolder",
+    "-d",
+    "--directory",
     action="store_true",
     help="use a directory of csv files -> will test using all files",
 )
 
 parser.add_argument(
-    "-d",
     "--difficulty",
     type=int,
     help="min difficuly (from 1 to 5) to test from - to skip easy words",
@@ -57,7 +56,7 @@ args = parser.parse_args()
 # Load vocabulary from file(s)
 path = args.fileOrFolder
 files = []
-if args.useFolder:
+if args.directory:
     if not os.path.isdir(path):
         print("Must specify a path with the -d flag")
         sys.exit(0)
