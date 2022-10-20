@@ -113,7 +113,8 @@ if not args.pinyinTest:
         else:
             example = "\n"
 
-        print(f"  Answer: {word[strMandarin]} (difficulty {word[strDifficulty]})")
+        print(f"  Answer: {word[strMandarin]}")
+        print(f"  Difficulty: {word[strDifficulty]}")
         time.sleep(0.12)
         print(f"  Full pinyin: {word[strPinyinWithTones]} ({word[strTones]})")
         time.sleep(0.12)
