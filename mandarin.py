@@ -98,6 +98,10 @@ if args.newestN is not None:
 else:
     print("- Testing all")
 
+# TODO: Add a feature that captures when there are multiple words added at the same time, where the
+# latest n captures over a slice of that list. If so, just add every word added at the same time. Not
+# sure how much this is really needed now I think about it though - leaving for reference.
+
 # Shuffle vocab list again
 random.shuffle(vocab)
 
