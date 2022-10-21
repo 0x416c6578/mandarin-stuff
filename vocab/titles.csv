@@ -1,18 +1,18 @@
-mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid,example,difficulty
-大,dà,da,4,big/large,looks like someone holding their hands out,大学生,1
-小,xiăo,xiao,3,little/young,arms down (close together = small),,1
-教,jiào,jiao,4,to teach,,,3
-授,shòu,shou,4,<to teach>,,,3
-教授,jiàoshòu,jiaoshou,4-4,professor,to teach x2 (good teacher = professor),王 教授,3
-老,lăo,lao,3,old,,,2
-师,shī,shi,1,to teach,kinda looks like a person standing by a chalkboard,,1
-老师,lăoshī,laoshi,3-1,teacher,old+teach,张 老师,2
-学,xué,xue,2,to study,someone with their study hat on,,1
-生,sheng,sheng,5,life/living,kinda looks like a spine,,1
-学生,xuéshēng,xuesheng,2-5,student,study+life (person),,1
-医,yī,yi,1,<doctor>,kinda looks like day in a box (doctors save the day),,1
-医生,yīshēng,yisheng,1-1,doctor,doctor+life (person),张 医生,1
-小姐,xiăojiĕ,xiaojie,3-3,miss,little+miss,张 小姐,2
-太太,tàitai,taitai,4-5,mrs/wife,,王 太太,1
-先,xiān,xian,1,before/first/early,,,2
-先生,xiānsheng,xiansheng,1-5,mr/husband,before+life?,张 先生,2
+mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid,example,difficulty,time_added
+大,dà,da,4,big/large,looks like someone holding their hands out,大学生,1,1666373035
+小,xiăo,xiao,3,little/young,arms down (close together = small),,1,1666373035
+教,jiào,jiao,4,to teach,,,3,1666373035
+授,shòu,shou,4,<to teach>,,,3,1666373035
+教授,jiàoshòu,jiaoshou,4-4,professor,to teach x2 (good teacher = professor),王 教授,3,1666373035
+老,lăo,lao,3,old,,,2,1666373035
+师,shī,shi,1,to teach,kinda looks like a person standing by a chalkboard,,1,1666373035
+老师,lăoshī,laoshi,3-1,teacher,old+teach,张 老师,2,1666373035
+学,xué,xue,2,to study,someone with their study hat on,,1,1666373035
+生,sheng,sheng,5,life/living,kinda looks like a spine,,1,1666373035
+学生,xuéshēng,xuesheng,2-5,student,study+life (person),,1,1666373035
+医,yī,yi,1,<doctor>,kinda looks like day in a box (doctors save the day),,1,1666373035
+医生,yīshēng,yisheng,1-1,doctor,doctor+life (person),张 医生,1,1666373035
+小姐,xiăojiĕ,xiaojie,3-3,miss,little+miss,张 小姐,2,1666373035
+太太,tàitai,taitai,4-5,mrs/wife,,王 太太,1,1666373035
+先,xiān,xian,1,before/first/early,,,2,1666373035
+先生,xiānsheng,xiansheng,1-5,mr/husband,before+life?,张 先生,2,1666373035

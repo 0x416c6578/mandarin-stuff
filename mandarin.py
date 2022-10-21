@@ -7,7 +7,7 @@ import os
 import glob
 import time
 
-# String constants
+# String constants from CSV files
 strMandarin = "mandarin"
 strPinyinWithTones = "pinyin_tones"
 strPinyinWithoutTones = "pinyin_no_tones"
@@ -16,6 +16,7 @@ strDefinition = "definition"
 strLearningAid = "learning_aid"
 strExample = "example"
 strDifficulty = "difficulty"
+strTimeAdded = "time_added"
 
 vocab = None
 
@@ -51,6 +52,14 @@ parser.add_argument(
     action="store_true",
     help="tests character -> pinyin + tones + translation",
 )
+
+parser.add_argument(
+    "-n",
+    "--newestN",
+    type=int,
+    help="tests the latest added n characters"
+)
+
 args = parser.parse_args()
 
 # Load vocabulary from file(s)
@@ -58,12 +67,12 @@ path = args.fileOrFolder
 files = []
 if args.directory:
     if not os.path.isdir(path):
-        print("Must specify a path with the -d flag")
+        print("Error: Must specify a path with the -d flag")
         sys.exit(0)
     files = glob.glob(path + "/*.csv")
 else:
     if os.path.isdir(path):
-        print("Must specify a csv vocab file")
+        print("Error: Must specify a csv vocab file")
         sys.exit(0)
     files = [path]
 
@@ -73,23 +82,39 @@ for file in files:
         csvDictReader = csv.DictReader(f)
         vocab += list(csvDictReader)
 
-# Shuffle vocab list
+print("Welcome to Alex's Mandarin tester")
+print("Selected options:")
+
+# Shuffle before sorting if using newestN - this randomises words that have the same time added
+random.shuffle(vocab)
+
+# If we are testing only the newest n characters
+if args.newestN is not None:
+    print("- Testing newest", args.newestN, "words")
+    # Sort on time added and reverse (now in newest->oldest order)
+    vocab = sorted(vocab, key=lambda elem: elem[strTimeAdded])[::-1]
+    # Select the newest n words
+    vocab = vocab[:args.newestN]
+else:
+    print("- Testing all")
+
+# Shuffle vocab list again
 random.shuffle(vocab)
 
 # Get difficulty
 difficulty = 0
-if args.difficulty != None:
-    print(f"Difficulty set: {args.difficulty}")
+if args.difficulty is not None:
+    print(f"- Difficulty set: {args.difficulty}")
     difficulty = int(args.difficulty)
 else:
-    print(f"No difficulty set")
+    print(f"- No difficulty set")
 
 # Filter vocab by difficulty
 vocab = list(filter(lambda word: int(word[strDifficulty]) >= difficulty, vocab))
 
 if not args.pinyinTest:
     # Test pinyin (no tones) + translation -> character
-    print("Pinyin to character testing (default)")
+    print("- Pinyin to character testing")
     numWords = len(vocab)
     i = 1
     for word in vocab:
@@ -143,4 +168,4 @@ elif not args.characterTest and args.pinyinTest:
         print(f"  Translation: {word[strDefinition]}")
         time.sleep(0.12)
         i += 1
-print("\n\n再见！")
+print("\n\n再见")

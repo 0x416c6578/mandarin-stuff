@@ -1,26 +1,26 @@
-mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid,example,difficulty
-我,wŏ,wo,3,I,,我很好,1
-你,nĭ,ni,3,you,,你好吗,1
-您,nín,nin,2,you (polite),you+heart (you are close to my heart),我爱您,2
-很,hĕn,hen,3,very (adj),,我不好,1
-是,shì,shi,4,to be,,你是我妈妈,1
-吗,ma,ma,5,y/n question particle,has mouth particle 口 - you ask questions with your mouth,你好吗？,1
-呢,ne,ne,5,particle for follow up question,,我很好，你呢？,3
-好,hăo,hao,3,good,woman+child,我是好,1
-高,gāo,gao,1,high,kinda looks like a skyscraper with windows,他是高大,2
-兴,xìng,xing,4,<happy>,,高兴,2
-高兴,gāoxìng,gaoxing,1-4,(to be) happy/pleased,high+happy,很高兴认识你,2
-晚,wăn,wan,3,evening,,晚安,2
-晚上,wănshang,wanshang,3-5,evening,evening+above,晚上好！,2
-安,ān,an,1,calm (adj),woman under a roof,晚安,1
-晚安,wăn ān,wan an,3 1,goodnight,evening+calm,晚安妈妈,2
-早,zăo,zao,3,morning,kinda looks like someone waking up,这是我的早饭,1
-早上,zăoshang,zaoshang,3-5,morning,morning+above,早上好,1
-明,míng,ming,2,bright,sun+moon,明年,1
-明天见,míngtiān jiàn,mingtian jian,2-1 4,see you tomorrow,tomorrow+to meet,再见！明天见,2
-不,bù,bu,4,negative/negation particle,,我不好,1
-客,kè,ke,4,guest,,不客气,3
-气,qì,qi,4,air/weather,kinda looks like wind blowing,不客气,2
-不客气,bú kèqì,bu keqi,2 4-4,don't mention it / you're welcome,,谢谢！- 不客气,3
-再见,zàijiàn,zaijian,4-4,goodbye,again+to meet (meet again),再见！明天见,3
-认识,rènshi,renshi,4-5,to know/recognise,,很高兴认识你,2
+mandarin,pinyin_tones,pinyin_no_tones,tones,definition,learning_aid,example,difficulty,time_added
+我,wŏ,wo,3,I,,我很好,1,1666373035
+你,nĭ,ni,3,you,,你好吗,1,1666373035
+您,nín,nin,2,you (polite),you+heart (you are close to my heart),我爱您,2,1666373035
+很,hĕn,hen,3,very (adj),,我不好,1,1666373035
+是,shì,shi,4,to be,,你是我妈妈,1,1666373035
+吗,ma,ma,5,y/n question particle,has mouth particle 口 - you ask questions with your mouth,你好吗？,1,1666373035
+呢,ne,ne,5,particle for follow up question,,我很好，你呢？,3,1666373035
+好,hăo,hao,3,good,woman+child,我是好,1,1666373035
+高,gāo,gao,1,high,kinda looks like a skyscraper with windows,他是高大,2,1666373035
+兴,xìng,xing,4,<happy>,,高兴,2,1666373035
+高兴,gāoxìng,gaoxing,1-4,(to be) happy/pleased,high+happy,很高兴认识你,2,1666373035
+晚,wăn,wan,3,evening,,晚安,2,1666373035
+晚上,wănshang,wanshang,3-5,evening,evening+above,晚上好！,2,1666373035
+安,ān,an,1,calm (adj),woman under a roof,晚安,1,1666373035
+晚安,wăn ān,wan an,3 1,goodnight,evening+calm,晚安妈妈,2,1666373035
+早,zăo,zao,3,morning,kinda looks like someone waking up,这是我的早饭,1,1666373035
+早上,zăoshang,zaoshang,3-5,morning,morning+above,早上好,1,1666373035
+明,míng,ming,2,bright,sun+moon,明年,1,1666373035
+明天见,míngtiān jiàn,mingtian jian,2-1 4,see you tomorrow,tomorrow+to meet,再见！明天见,2,1666373035
+不,bù,bu,4,negative/negation particle,,我不好,1,1666373035
+客,kè,ke,4,guest,,不客气,3,1666373035
+气,qì,qi,4,air/weather,kinda looks like wind blowing,不客气,2,1666373035
+不客气,bú kèqì,bu keqi,2 4-4,don't mention it / you're welcome,,谢谢！- 不客气,3,1666373035
+再见,zàijiàn,zaijian,4-4,goodbye,again+to meet (meet again),再见！明天见,3,1666373035
+认识,rènshi,renshi,4-5,to know/recognise,,很高兴认识你,2,1666373035
