@@ -29,3 +29,4 @@ options:
   -c, --characterTest   tests pinyin (no tones) + translation -> character
   -p, --pinyinTest      tests character -> pinyin + tones + translation
 ```
+
