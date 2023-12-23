@@ -60,6 +60,13 @@ parser.add_argument(
     help="tests the latest added n characters"
 )
 
+parser.add_argument(
+    "-i",
+    "--invisibleProgress",
+    action="store_true",
+    help="hides the progress during a test (no current/total number)"
+)
+
 args = parser.parse_args()
 
 # Load vocabulary from file(s)
@@ -113,6 +120,11 @@ if args.difficulty is not None:
 else:
     print(f"- No difficulty set")
 
+if args.invisibleProgress:
+    print(f"- Hiding progress")
+else:
+    print(f"- Not hiding progress")
+
 # Filter vocab by difficulty
 vocab = list(filter(lambda word: int(word[strDifficulty]) >= difficulty, vocab))
 
@@ -122,7 +134,14 @@ if not args.pinyinTest:
     numWords = len(vocab)
     i = 1
     for word in vocab:
-        print(
+        if args.invisibleProgress:
+            print(
+            f"\n---------------- ?/{numWords} ----------------\n"
+            f"Pinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
+            end="",
+        )
+        else:
+            print(
             f"\n---------------- {i}/{numWords} ----------------\n"
             f"Pinyin (no tones): {word[strPinyinWithoutTones]} ({word[strDefinition]})  ",
             end="",
@@ -143,7 +162,7 @@ if not args.pinyinTest:
             example = "\n"
 
         print(f"  Answer: {word[strMandarin]}")
-        print(f"  Difficulty: {word[strDifficulty]}")
+        #print(f"  Difficulty: {word[strDifficulty]}")
         time.sleep(0.12)
         print(f"  Full pinyin: {word[strPinyinWithTones]} ({word[strTones]})")
         time.sleep(0.12)
@@ -157,11 +176,18 @@ elif not args.characterTest and args.pinyinTest:
     numWords = len(vocab)
     i = 1
     for word in vocab:
-        print(
-            f"\n---------------- {i}/{numWords} ----------------\n"
-            f"Character: {word[strMandarin]}   ",
-            end="",
-        )
+        if args.invisibleProgress:
+            print(
+                f"\n---------------- ?/{numWords} ----------------\n"
+                f"Character: {word[strMandarin]}   ",
+                end="",
+            )
+        else:
+            print(
+                f"\n---------------- {i}/{numWords} ----------------\n"
+                f"Character: {word[strMandarin]}   ",
+                end="",
+            )
         inp = input("")
         if "q" in inp:
             print("再见！")
